@@ -16,9 +16,11 @@ class ContactController extends Controller
     {
         //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
         $request->validate([
-            'email' => 'required|email',
-            'title' => 'required',
-            'body'  => 'required',
+            'name'     => 'required|max:10',
+            'email'    => 'required|email',
+            'tel'      => 'nullable|numeric',
+            'gender'   => 'required',
+            'contents' => 'required',
         ]);
         
         //フォームから受け取ったすべてのinputの値を取得

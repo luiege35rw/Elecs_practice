@@ -1,10 +1,11 @@
-$title = 'お問い合わせ - 確認';
+@php
+$title = '確認ページ';
 @endphp
 
 @extends('layout.master')
 
 @section('content')
-    <h1 class="text-center mt-2 mb-5">お問い合わせ確認</h1>
+<h1 class="text-center mt-2 mb-5">お問い合わせ確認</h1>
     <div class="container">
         {!! Form::open(['route' => 'process', 'method' => 'POST']) !!}
             {{ csrf_field() }}

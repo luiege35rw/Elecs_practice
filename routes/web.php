@@ -23,3 +23,8 @@ Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.conf
 Route::get('/contact/thanks', 'ContactController@send')->name('contact.send');
 Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
 
+// DB挿入、メール送信
+Route::post('/process', 'ContactsController@process')->name('process');
+
+// 完了ページ
+Route::get('/complete', 'ContactsController@complete')->name('complete');
