@@ -11,17 +11,11 @@
 |
 */
 
+// お問い合わせ入力ページ
+Route::get('/', 'ContactsController@index')->name('contact');
 
-//入力ページ
-Route::get('/contact', 'ContactController@index')->name('contact.index');
-
-//確認ページ
-Route::get('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
-Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
-
-//送信完了ページ
-Route::get('/contact/thanks', 'ContactController@send')->name('contact.send');
-Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
+// 確認ページ
+Route::post('/confirm', 'ContactsController@confirm')->name('confirm');
 
 // DB挿入、メール送信
 Route::post('/process', 'ContactsController@process')->name('process');

@@ -7,7 +7,7 @@ $title = 'お問い合わせ';
 @section('content')
     <h1 class="text-center mt-2 mb-5">お問い合わせ</h1>
     <div class="container">
-        {!! Form::open(['route' => 'contact.confirm', 'method' => 'POST']) !!}
+        {!! Form::open(['route' => 'confirm', 'method' => 'POST']) !!}
             {{ csrf_field() }}
             <div class="form-group row">
                 <p class="col-sm-4 col-form-label">お名前（10文字以内）<span class="badge badge-danger ml-1">必須</span></p>
